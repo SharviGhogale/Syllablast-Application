@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 768px) {
+  .resetButton, .swapButton, .undoButton {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .C {
+    font-size: 0.8rem;
+  }
+  .numOfmoves, .score {
+    font-size: 1rem;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.board-row {
+  padding: 1px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font: bold 36px Arial;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 2px 6px;
+  border: 1px solid #333333;
+}
+
+.numOfmoves, .score {
+  font: bold 20px Arial;
+}
+
+.resetButton, .swapButton, .undoButton, .C {
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 10px 20px;
+  border: 1px solid #333333;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.resetButton:hover, .swapButton:hover, .undoButton:hover, .C:hover {
+  background-color: #dddddd;
+}
+
+.config {
+  font: bold 20px Arial;
+}
+
+.syllablast {
+  font: bold 35px Arial;
+}
+
+.selectconfig {
+  font: bold 20px Arial;
+  text-align: center;
+}
+
+
+.square.selected {
+  transform: scale(1.2); /* Pop-up effect */
+}
+
+.square.correct {
+  background-color: lightgreen; /* Turn green if correct */
+}
