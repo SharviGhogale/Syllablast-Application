@@ -1,4 +1,4 @@
-import { Coordinate, Model } from './model'
+import { Model } from './model'
 
 export function realHandle(model:Model,button:number) {
     // the button that is selected will call respective functions

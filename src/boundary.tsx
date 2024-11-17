@@ -1,12 +1,16 @@
 'use client'                              // directive to clarify client-side
-import React, {useState,useEffect} from 'react'
-import { Model,Coordinate,Board} from './model'
-import {actualPuzzle} from './app/page'
-import { realHandle } from './controllers'
+import React, {useState} from 'react'
+import { Model,Coordinate} from './model'
 
+
+
+type BoardGUIProps = {
+  topmodel: Model; // Use your defined type here
+  redraw: () => void; // Assuming redraw is a function with no arguments
+};
 
 // redraw is a function
-export function BoardGUI({topmodel, redraw}) { 
+export function BoardGUI({topmodel, redraw}:BoardGUIProps) { 
   const [selectedSyllables, setSelectedSyllables] = useState<Coordinate[]>([]);
 
 
@@ -14,7 +18,7 @@ export function BoardGUI({topmodel, redraw}) {
     function handleClick(r:number, c:number) {
       console.log("clicked on: ", r, c, redraw)
       const clickCoordinate = new Coordinate(r, c);
-      let updatedSyllables = [...selectedSyllables];
+      const updatedSyllables = [...selectedSyllables];
 
       if (updatedSyllables.length === 2) {
           updatedSyllables.shift(); // Remove the first syllable
@@ -35,7 +39,7 @@ export function BoardGUI({topmodel, redraw}) {
     }
 
     function storage(coord1:Coordinate,coord2: Coordinate){
-      let model = topmodel
+      const model = topmodel
       model.storingCoordianteData(coord1,coord2)
     }
     
