@@ -1,7 +1,7 @@
 'use client'                              // directive to clarify client-side
-import React,{useEffect,useState } from 'react'
+import React,{useEffect } from 'react'
 import { config1, config2, config3 } from '../puzzle'
-import { Model,Coordinate,Board} from '../model'
+import { Model} from '../model'
 import { BoardGUI} from '../boundary'
 import { realHandle } from '../controllers'
 
@@ -23,20 +23,20 @@ export default function Home() {
 
 // to carry out swap 
   function handleSwap() {
-    let button1 = 1
+    const button1 = 1
     realHandle(model,button1)
     refresh()
   }
 
   function handleUndo() {
-    let button2 = 2
+    const button2 = 2
     realHandle(model,button2)
     refresh()
 
   }
 
   function handleReset() {
-    let button3 = 3
+    const button3 = 3
     setModel(new Model(actualPuzzle));
     realHandle(model,button3)
     refresh()
