@@ -6,7 +6,7 @@ Link - https://sharvighogale.github.io/Syllablast-Application/
 ## About the Game
 Syllablast is an engaging and interactive word puzzle game where players arrange syllables to form complete, valid words. With dynamic configurations and real-time feedback, the game challenges users to think critically while tracking their progress through swaps, scores and completion status.
 
-<img src="Syllablast.png" />
+<img src="Syllablast.png" width=600 height=700 />
 
 ## Features
 - Multiple Puzzle Configurations: Play with different syllable arrangements for varied challenges.
