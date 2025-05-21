@@ -6,7 +6,7 @@ Link - https://sharvighogale.github.io/Syllablast-Application/
 ## About the Game
 Syllablast is an engaging and interactive word puzzle game where players arrange syllables to form complete, valid words. With dynamic configurations and real-time feedback, the game challenges users to think critically while tracking their progress through swaps, scores and completion status.
 
-<img src="https://sharvighogale.github.io/Syllablast-Application/Syllablast.png" />
+<img src="Syllablast.png" />
 
 ## Features
 - Multiple Puzzle Configurations: Play with different syllable arrangements for varied challenges.
@@ -51,7 +51,7 @@ To install the necessary test scripts, execute the following:
 npm install -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom
 ```
 
-##Installing @vitest/coverage-v8
+## Installing @vitest/coverage-v8
 
 When you run npm run test you will be prompted to install @vitest which you should accept.
 
